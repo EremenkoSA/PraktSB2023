@@ -8,13 +8,22 @@ public class Time implements Command {
     public String getName() {
         return "time";
     }
+
+    @Override
+    public String getHelp() {
+        return "Выводит или устанавливает системное время";
+    }
+
     @Override
     public void exec(String... args) {
-        if (args == null) {
+        if (args.length < 2) {
             System.out.println("Текущее время: " + (LocalTime.now()));
-        }
-        else {
-            System.out.println("Выводит или устанавливает системное время");
+        } else if (args.length > 2) {
+            System.out.println("не является внутренней или внешней командой");
+        } else if (args[1].equals  ("-h")){
+            System.out.println(getHelp());
+        } else {
+            System.out.println("не является внутренней или внешней командой");
         }
     }
 }
