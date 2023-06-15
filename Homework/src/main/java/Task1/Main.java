@@ -1,10 +1,7 @@
-package org.example;
+package Task1;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Scanner;
-import java.io.File;
 
 public class Main {
     public static HashMap<String, Command> ComList = new HashMap<>();

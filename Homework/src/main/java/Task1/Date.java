@@ -1,23 +1,23 @@
-package org.example;
+package Task1;
 
-import java.time.LocalTime;
-import org.example.Command;
-public class Time implements Command {
+import java.time.LocalDate;
+
+public class Date implements Command {
 
     @Override
     public String getName() {
-        return "time";
+        return "date";
     }
 
     @Override
     public String getHelp() {
-        return "Выводит или устанавливает системное время";
+        return "Выводит или устанавливает текущую дату";
     }
 
     @Override
     public void exec(String... args) {
         if (args.length < 2) {
-            System.out.println("Текущее время: " + (LocalTime.now()));
+            System.out.println("Текущая дата: " + (LocalDate.now()));
         } else if (args.length > 2) {
             System.out.println("не является внутренней или внешней командой");
         } else if (args[1].equals  ("-h")){

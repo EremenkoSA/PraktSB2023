@@ -1,22 +1,23 @@
-package org.example;
+package Task1;
 
-import java.time.LocalDate;
 import java.time.LocalTime;
-public class Quit implements Command{
+
+public class Time implements Command {
 
     @Override
     public String getName() {
-        return "quit";
+        return "time";
     }
+
     @Override
     public String getHelp() {
-        return "Выход из командной строки";
+        return "Выводит или устанавливает системное время";
     }
 
     @Override
     public void exec(String... args) {
         if (args.length < 2) {
-            System.exit(0);
+            System.out.println("Текущее время: " + (LocalTime.now()));
         } else if (args.length > 2) {
             System.out.println("не является внутренней или внешней командой");
         } else if (args[1].equals  ("-h")){

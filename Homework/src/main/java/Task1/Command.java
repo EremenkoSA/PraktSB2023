@@ -1,4 +1,4 @@
-package org.example;
+package Task1;
 
 public interface Command {
     public String getName();
